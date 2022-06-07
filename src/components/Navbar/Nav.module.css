@@ -1,0 +1,26 @@
+.nav {
+  width: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--panels-color);
+  grid-area: n;  
+}
+
+a {
+  text-decoration: none;
+  color: var(--nav-text-color);
+}
+
+a:hover {
+  color: var(--nav-hover-text-color);
+}
+
+a.activeLink {
+  color: var(--nav-active-text-color);
+}
+
+.item {
+  line-height: 25px;
+  height: 25px;
+}

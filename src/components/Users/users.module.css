@@ -1,0 +1,225 @@
+
+.user_card__avatar {
+    height: 120px;
+    width: 120px;
+    margin-bottom: 10px;
+    border-radius: 5px;    
+}
+
+.user_card {    
+    border-radius: 10px;
+    box-shadow: 0 0 8px var(--main-border);
+    border: solid var(--main-border) 2px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin:  5px 0 5px 0;
+} 
+
+.user_card.folowed{
+    background-color: var(--main-border);
+}
+
+.user_card__avatar__block {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_card__name{
+    font-size: 30px;
+    font-weight: 700;    
+}
+
+.users_wrapper{
+    margin-top: -5px ;
+}
+
+.no_followed_button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    width: 120px;
+    background-color: rgba(202, 250, 154, 0.781);
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 16px;
+    color:rgb(18, 110, 0);
+    transition: 0,2s;
+
+}
+
+.followed_button {
+    background-color: rgb(216, 216, 216);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    width: 120px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 16px;
+    color:rgb(131, 131, 131);
+    transition: 0,2s;    
+}
+
+.no_followed_button:hover, .followed_button:hover{
+    box-shadow: 0 0 8px; 
+    font-size: 18px;
+}
+
+.user_card__info{
+    align-items: center;
+    width: 200px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.page_list {
+    height: 30px;
+    margin-bottom: 10px;
+    max-width: 800px;
+    display: flex;    
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.page {    
+    display: inline-block;
+    padding: 4px; 
+    cursor: pointer;
+    color: var(--page-numbers-color);
+    width: 37px
+}
+
+
+.page:hover {
+    color: var(--page-numbers-hover-color);
+    font-size: 19px;
+}
+
+
+.selectedPage {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 2px;
+    cursor: default;    
+    font-weight: 700;
+    font-size: 20px;
+    width: 40px
+}
+
+.loading_button{
+    width: 80px;
+    height: 80px;
+}
+
+.f_l_page{
+    width: 45px;
+}
+
+.top__arrow{
+    border-radius: 50%;
+    height: 50px;
+    position: fixed;
+    bottom: 80px;    
+    left: calc(50vw + min(35%, 500px));
+    cursor: pointer;
+}
+
+.top__arrow:hover{
+    transform: scale(1.1);
+}
+
+.paginator_custumizer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+ul {
+    list-style: none;
+    display: block;
+    margin:0px;
+    padding:0px;
+    margin-left: 5px;
+    width: 37px;
+    text-align: center;
+}
+
+.per__page__count_list{
+    position: relative;
+    cursor: default;
+}
+
+.per__page__count_list > li  {
+    
+    display: block;
+    color: var(--text-color);    
+    padding: 10px;   
+    text-decoration: none;   
+    background-color: var(--main-border);
+}
+
+.per__page__count_list > li:hover {    
+    background-color: var(--main-border);
+}
+.per__page__count_list_item {
+    width: 35px;
+    top: 40px;
+    left: -8%;
+    position: absolute;
+    box-shadow: 0 0 8px;      
+    display: none;    
+    background-color: white;
+}
+
+.per__page__count_list_item > li{
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    text-decoration: none;        
+    color: var(--text-color);    
+    background-color: var(--main-border);
+}
+.per__page__count_list_item > li:hover {
+
+    color: var(--nav-text-color);
+    background-color: var(--panels-color);    
+}
+.per__page__count_list > li:hover > .per__page__count_list_item {
+   
+    display: block;
+}
+
+.choose_count{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* .page__number_input{    
+    box-sizing: border-box;
+    background-color: var(--main-border);    
+    border-radius: 20px;
+    border: 1px solid var(--panels-color);
+    margin: 3px;
+    height: 30px;
+    width: 70px;    
+    padding-left: 15px;
+}
+
+.page__number_input:focus {
+    background-color: var(--active-login);
+    box-shadow: 0 0 3px var(--panels-color);
+    outline: none;
+} */

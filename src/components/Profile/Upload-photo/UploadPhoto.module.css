@@ -1,0 +1,78 @@
+button:disabled {
+    background-color: grey;
+}
+
+.modal__background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); 
+    z-index: 1050;
+}
+
+.modal__window{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--main-border);
+    height: 190px;
+    width: 600px;
+    margin: auto;
+    margin-top: 30vh;        
+}
+
+.file__input{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.input__file_button:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 12px var(--panels-color);
+}
+
+.input__file_button_text {
+    line-height: 20px;
+    margin-top: 1px;
+  }
+
+  .input__file_icon_wrapper{
+      height: 70px;
+      width: 55px;
+      border-right: solid 2px var(--nav-text-color);
+      display: flex;
+      align-items: center;      
+  }
+
+.input__file_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;    
+    height: 70px;
+    background: var(--panels-color);
+    color: var(--nav-text-color);    
+    font-weight: 500;    
+  }
+
+.input__icon{
+    height: 40px;
+  }
+
+  .file__upload_wrapper{
+      margin: 20px;
+  }
+
+  .uppload__button_wrapper{
+      margin: 15px;
+  }
+
+  .button__loading { 
+    margin-top: -23px;     
+    height:90px;
+    width: 120px;
+  }

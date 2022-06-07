@@ -1,0 +1,44 @@
+body {
+    color:#281e09 ;
+    
+    --main-border: #d3dbd9;     
+    --text-color: #281e09;
+    --panels-color: #026670;
+    --page-numbers-color: grey;
+    --page-numbers-hover-color: rgb(82, 82, 82);
+    --nav-text-color: #edeae5;
+    --nav-hover-text-color:#FEF9C7;
+    --nav-active-text-color: #FCE181;
+    --night-switcher: rgba(255, 255, 188, 0.68);
+    --night-switcher-shadow:rgb(10, 10, 143);
+    --my-massage:#fed03a;
+    --your-massage:#ffa250;
+    --active-login: rgb(255, 254, 249);
+    
+
+    --logo-shift: 0px;
+
+    transition: 1s;
+}
+
+body.night {    
+    color: #c8c7c7;
+    background-color: #012a4a;
+
+    --main-border: #0b4470;  
+    --text-color: #c8c7c7;
+    --panels-color: #25567B;
+    --page-numbers-color: rgb(231, 231, 231);
+    --page-numbers-hover-color: rgb(158, 158, 158);
+    --nav-active-text-color: #cb7300;
+    --nav-hover-text-color:#FF9200;
+    --night-switcher: rgb(0, 0, 84);
+    --my-massage:#00707c;
+    --your-massage:#6000a9;
+    --night-switcher-shadow: #f9cb00;
+    --active-login: rgb(199, 213, 255);
+    
+    --logo-shift: 35px;
+
+
+}

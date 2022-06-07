@@ -1,0 +1,46 @@
+.content {
+    grid-area: c;
+}
+
+.item {    
+    margin-bottom: 10px;    
+    display: flex;
+    flex-direction: column;    
+    min-height: 80px;
+    padding: 10px;
+    background-color: var(--main-border);      
+    transition: 0.2s linear !important;
+}
+
+.item__content{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+.item__likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item:hover {
+    box-shadow: 0 0 10px var(--panels-color);
+}
+
+.item__inner__text {
+    word-break:break-all;
+    margin-left: 20px;
+}
+
+.ava {
+    height: 50px;
+}
+
+.heart {
+    margin: 10px;
+    height: 20px;
+}
+
+
+

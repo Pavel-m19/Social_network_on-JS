@@ -1,0 +1,86 @@
+.wrapper{
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    grid-gap: 3px; 
+}
+
+.item{
+    color: var(--text-color);
+}
+
+.dialogsList {
+    padding: 10px;
+}
+
+.massager{
+    padding: 10px;
+}
+
+.massager__chat {
+    /* display: flex;
+    flex-direction: column; */
+    padding: 5px;
+    height: 600px;    
+    box-shadow: 0 0 10px var(--panels-color);
+    overflow-y: scroll;
+}
+
+.massager__chat::-webkit-scrollbar:hover {
+  width: 3px;
+  opacity: 0.1;   
+  transition: 0.2s;
+}
+
+.massager__chat::-webkit-scrollbar-thumb:hover {
+    border-radius: 7px;
+    background-color: var(--panels-color);
+    opacity: 0.1;    
+    transition: 0.2s;
+}
+
+.massager__chat::-webkit-scrollbar-track:hover {    
+    border-radius: 7px;
+    background-color: transparent;
+    transition: 0.2s;
+}
+
+.massager__chat::-webkit-scrollbar{
+    color: transparent;
+    opacity: 0.1;
+    width: 7px;
+}
+
+.massager__input {
+    margin-top: 6px;
+    padding: 10px;        
+    box-shadow: 0 0 10px var(--panels-color);
+}
+
+.massager__massage_wrapper {
+    padding: 5px;
+    display: flex;   
+     
+}
+
+.comp{
+    justify-content: right;      
+}
+
+.massager__massage {
+    display: inline-block;
+    padding: 12px 18px 12px 18px;   
+    background-color: var(--my-massage);
+    border-radius: 20px;
+    max-width: 450px;
+    word-wrap:break-word;
+}
+
+.m_comp {
+    background-color: var(--your-massage)
+}
+
+
+.activeLink {
+    color: var(--nav-active-text-color);
+}
