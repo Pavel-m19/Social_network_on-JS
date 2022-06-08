@@ -5,35 +5,34 @@ let baseUrl = "https://social-network.samuraijs.com/api/1.0/"
 const instance = axios.create({
     withCredentials: true,
     baseURL: "https://social-network.samuraijs.com/api/1.0/",
-    headers: {"API-KEY": '0ea61604-352f-49ec-b9f6-1ea74a3fd136'}
+    headers: {"API-KEY": "d2e5bb9a-211c-41b0-93cb-0f54f2d56f6f"}
 });
 
 
-export const getUsersAPI = (pageNumber, pageSize) => {
-    return fetch(baseUrl + `users?page=${pageNumber}&count=${pageSize}`, {
-        credentials: 'include'
-    })
-        .then(response => response.json())
-}
+export const getUsersAPI = (pageNumber = 1, pageSize = 5) => {
+    return instance.get(`users?page=${pageNumber}&count=${pageSize}`)
+    .then(response => {        
+        return response.data;
+    })}
 
 export const subscribeAPI = (method, user) => {
     return fetch(baseUrl + `follow/${user.id}`, {
         method: method,
         credentials: 'include',
         headers: {
-            "API-KEY": '0ea61604-352f-49ec-b9f6-1ea74a3fd136'
+            "API-KEY": "d2e5bb9a-211c-41b0-93cb-0f54f2d56f6f"
         }
     }).then(response => response.json())
 }
 
 export const getCurrentUserAPI = () => {
-    return fetch(baseUrl + 'auth/me', { credentials: "include" })
-        .then(response => response.json())
+    return instance.get('auth/me')
+    .then(response => {return response.data})
 }
 
 export const profileAPI = (userId) => {
-    return fetch(baseUrl + `profile/${userId}`)
-      .then(response => response.json())
+    return instance.get("profile/" + userId)
+    .then(response => {return response.data}) 
 }
 
 export const newStatusAPI = (status) => {    
