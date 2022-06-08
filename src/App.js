@@ -29,7 +29,7 @@ class App extends React.Component {
 
     const history = createBrowserHistory({ window });
     return (
-      <BrowserRouter history={history} basename={ProcessingInstruction.env.PUBLIC_URL}>
+      <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
         <div className='app_wrapper'>
           <HeaderContainer />
           <NavContainer />
