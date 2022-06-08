@@ -17,39 +17,41 @@ import { createBrowserHistory } from "history";
 
 
 class App extends React.Component {
-  
+
   componentDidMount() {
-    this.props.initializeAPP()    
+    this.props.initializeAPP()
   }
 
   render() {
-    if (!this.props.auth.initialized){      
-      return <Preloader/>
+    if (!this.props.auth.initialized) {
+      return <Preloader />
     }
 
     const history = createBrowserHistory({ window });
     return (
-    <BrowserRouter history={history}>
-      <div className='app_wrapper'>
-        <HeaderContainer />
-        <NavContainer /> 
-        <div className='app_wrapper_content'>
+      <BrowserRouter history={history} basename={ProcessingInstruction.env.PUBLIC_URL}>
+        <div className='app_wrapper'>
+          <HeaderContainer />
+          <NavContainer />
+          <div className='app_wrapper_content'>
 
-          <Routes>
-            <Route path='/Dialog/*' element={<DialogsContainer/>}/>            
-            <Route path='/Profile/:userID' element={<ProfileContainer/>}/>
-            <Route path='/Profile/my' element={<ProfileContainer/>}/>
-            <Route path='/News/*' element={<News/>}/>
-            <Route path='/Music/*' element={<Music/>}/>
-            <Route path='/Users/*' element={<UsersContainer/>} />
-            <Route path='/Login/*' element={<LoginContainer/>} />
-          </Routes>
+            <Routes>
+              <Route path='/' element={<ProfileContainer />} />
+              <Route path='/Dialog/*' element={<DialogsContainer />} />
+              <Route path='/Profile/:userID' element={<ProfileContainer />} />
+              <Route path='/Profile/my' element={<ProfileContainer />} />
+              <Route path='/News/*' element={<News />} />
+              <Route path='/Music/*' element={<Music />} />
+              <Route path='/Users/*' element={<UsersContainer />} />
+              <Route path='/Login/*' element={<LoginContainer />} />
+            </Routes>
+
+          </div>
 
         </div>
-
-      </div>
-    </BrowserRouter>
-  );}
+      </BrowserRouter>
+    );
+  }
 }
 
 let stateToProps = (state) => {
@@ -58,6 +60,6 @@ let stateToProps = (state) => {
   };
 };
 
-let AppContainer =connect(stateToProps, {initializeAPP})(App);
+let AppContainer = connect(stateToProps, { initializeAPP })(App);
 
 export default AppContainer

@@ -165,8 +165,7 @@ export const profileThunkCreator = (userId) => {
         dispatch(userPageFetcher(true))           
 
         profileAPI(userId)
-            .then(resp => {       
-                console.log(resp)         
+            .then(resp => {                           
                 dispatch(setUserPage(resp, userId))                
             })
             .then(() => {

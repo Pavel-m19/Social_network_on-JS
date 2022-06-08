@@ -58,8 +58,7 @@ export const getCurrentUserThunkCreator = () => {
 
     dispatch(onFetching());
         
-    return getCurrentUserAPI().then(resp => { 
-        console.log(resp)                     
+    return getCurrentUserAPI().then(resp => {                            
         if (resp.resultCode === 0) {
             dispatch(setCurrentUser(resp.data.id, resp.data.login, resp.data.email, true))
         } else if(resp.resultCode === 1) {

@@ -7,31 +7,38 @@ import '../../assets/main-style.css';
 import { useState } from "react";
 import topArrow from '../../assets/top-arrow.png'
 import Preloader from "../Common/preloader";
+import { useRef } from "react";
 
 let Users = (props) => {
 
     let [currentPage, setCurrentPage] = useState(props.usersPage.currentPage)
     let [scrolled, setScroled] = useState(false)
+    let [numbersCount, setNumbersCount] = useState(3)
+
+    let mainElement = useRef(null)
+
 
     let pageCounter = () => {
         let pageNumbers = [];
-        let pageCount = Math.ceil(props.usersPage.totalUsersCount / props.usersPage.pageSize)
-        for (let i = Math.max(2, (props.usersPage.currentPage - 6));
-            i <= Math.min(Math.max((props.usersPage.currentPage + 6), 14),
+        let pageCount = Math.ceil(props.usersPage.totalUsersCount / props.usersPage.pageSize)        
+        for (let i = Math.max(2, (props.usersPage.currentPage - numbersCount));
+            i <= Math.min((props.usersPage.currentPage + numbersCount),
                 pageCount - 1); i++) { pageNumbers.push(i) }
         return pageNumbers
     }
 
+
     let scrollHandler = (e) => {
         if ((e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100)
-            && !props.usersPage.scrollIsFetching) 
-            {if(Math.ceil(props.usersPage.totalUsersCount / props.usersPage.pageSize) > currentPage){
-            props.getUsersScrollThunkCreator(currentPage, props.usersPage.pageSize);
-            setCurrentPage(currentPage + 1) }   
+            && !props.usersPage.scrollIsFetching) {
+            if (Math.ceil(props.usersPage.totalUsersCount / props.usersPage.pageSize) > currentPage) {
+                props.getUsersScrollThunkCreator(currentPage, props.usersPage.pageSize);
+                setCurrentPage(currentPage + 1)
+            }
         }
         if ((e.target.documentElement.scrollTop < 5) && !props.usersPage.isFetching) {
-            props.scrollUsersDelete()   
-            setCurrentPage(props.usersPage.currentPage)         
+            props.scrollUsersDelete()
+            setCurrentPage(props.usersPage.currentPage)
         }
 
         if ((e.target.documentElement.scrollTop > 100)) {
@@ -43,12 +50,21 @@ let Users = (props) => {
         window.scrollTo(0, 0)
     }
 
-    let chooseUsersPerPage = (count) => {        
-        
+    let chooseUsersPerPage = (count) => {
+
         props.setUsersPerPage(count, 1)
         props.getUsersThunkCreator(props.usersPage.currentPage, count)
 
     }
+
+    let pageCounterCalc = () => {
+        if (mainElement.current != null) {
+            let newPageCount = Math.floor((mainElement.current.clientWidth - 100) / 43 / 2 - 1)
+            if(newPageCount !== numbersCount){setNumbersCount(newPageCount)}
+        }
+    }
+
+    useEffect(pageCounterCalc)
 
     useEffect(() => {
         document.addEventListener('scroll', scrollHandler)
@@ -57,8 +73,15 @@ let Users = (props) => {
         }
     })
 
+    useEffect(() => {
+        window.addEventListener('resize', pageCounterCalc)
+        return () => {
+            window.removeEventListener('resize', pageCounterCalc)
+        }
+    })
+
     return (
-        <div>
+        <div ref={mainElement}>
             <div>
                 {scrolled &&
                     <img onClick={srollToTop}
@@ -76,13 +99,13 @@ let Users = (props) => {
                     <ul className={s.per__page__count_list}>
                         <li><span>{props.usersPage.pageSize}</span>
                             <ul className={s.per__page__count_list_item}>
-                                <li onClick={() => {chooseUsersPerPage(5)}}>5</li>
-                                <li onClick={() => {chooseUsersPerPage(10)}}>10</li>
-                                <li onClick={() => {chooseUsersPerPage(20)}}>20</li>
+                                <li onClick={() => { chooseUsersPerPage(5) }}>5</li>
+                                <li onClick={() => { chooseUsersPerPage(10) }}>10</li>
+                                <li onClick={() => { chooseUsersPerPage(20) }}>20</li>
                             </ul>
-                        </li>                        
+                        </li>
                     </ul>
-                    
+
                 </div>
             </div>
             <div className={s.page_list}>
