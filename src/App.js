@@ -14,6 +14,7 @@ import { initializeAPP } from "../src/redux/auth-reducer"
 import { connect } from "react-redux";
 import Preloader from './components/Common/preloader';
 import { createBrowserHistory } from "history";
+import FooterClass from './components/Footer/footer-container';
 
 
 class App extends React.Component {
@@ -31,8 +32,10 @@ class App extends React.Component {
     return (
       <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
         <div className='app_wrapper'>
+          
           <HeaderContainer />
           <NavContainer />
+          
           <div className='app_wrapper_content'>
 
             <Routes>
@@ -47,6 +50,10 @@ class App extends React.Component {
             </Routes>
 
           </div>
+
+          <FooterClass/>
+
+          
 
         </div>
       </BrowserRouter>

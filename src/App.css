@@ -1,18 +1,24 @@
+html {
+  height: 100%;
+}
+
 .logo {
   height: 40px;
   width: 40px;
 }
 
 .app_wrapper {
+  min-height: 100vh;
   display: grid;
   max-width: min(900px, 90vw);
   margin: auto;
 
   grid-template-areas:
-    'h h'
-    'n c';
+    'h h '
+    'n c '
+    'f f ';
 
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 60px 1fr 80px;
   grid-template-columns: 1fr 8fr;
   grid-gap: 10px;
 }
