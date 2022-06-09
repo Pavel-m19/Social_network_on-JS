@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Social_network_on-JS/static/css/main.1113d910.css",
-    "main.js": "/Social_network_on-JS/static/js/main.e7b32d82.js",
+    "main.css": "/Social_network_on-JS/static/css/main.c134d310.css",
+    "main.js": "/Social_network_on-JS/static/js/main.96d1bf1b.js",
     "static/js/787.28cb0dcd.chunk.js": "/Social_network_on-JS/static/js/787.28cb0dcd.chunk.js",
     "static/media/sun logo.png": "/Social_network_on-JS/static/media/sun logo.79a72dd3cdd7dad138a9.png",
     "static/media/BeanEater.gif": "/Social_network_on-JS/static/media/BeanEater.b73093a68e61849a8473.gif",
@@ -9,12 +9,12 @@
     "static/media/user_ava.png": "/Social_network_on-JS/static/media/user_ava.6d1644ecf41addb3bd0e.png",
     "static/media/button_loading.gif": "/Social_network_on-JS/static/media/button_loading.2ce5c7c546f39287aac0.gif",
     "index.html": "/Social_network_on-JS/index.html",
-    "main.1113d910.css.map": "/Social_network_on-JS/static/css/main.1113d910.css.map",
-    "main.e7b32d82.js.map": "/Social_network_on-JS/static/js/main.e7b32d82.js.map",
+    "main.c134d310.css.map": "/Social_network_on-JS/static/css/main.c134d310.css.map",
+    "main.96d1bf1b.js.map": "/Social_network_on-JS/static/js/main.96d1bf1b.js.map",
     "787.28cb0dcd.chunk.js.map": "/Social_network_on-JS/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1113d910.css",
-    "static/js/main.e7b32d82.js"
+    "static/css/main.c134d310.css",
+    "static/js/main.96d1bf1b.js"
   ]
 }
