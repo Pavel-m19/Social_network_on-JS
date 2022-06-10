@@ -1,0 +1,95 @@
+.box{
+    height: 100px;
+    width: 100px;
+    border: solid 3px black;
+    margin-right: -3px;
+    margin-bottom: -3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: var(--main-border) ;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.area__wrapper{    
+    align-items: center;
+    flex-direction: column;    
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.icon{
+    height: 70px;
+}
+
+.button__wrapper{
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.area{
+    position: relative;
+}
+
+.area__shadow{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;  
+	bottom: 0; 
+ 	right: 0;
+	left: 0;          
+    position:absolute;
+    background: rgba(4, 4, 4, 0.534);
+    background: linear-gradient(41deg, rgba(4, 4, 4, 0.349) 0%, rgba(20, 20, 20, 0.603) 47%, rgba(22,22,22,0.6320903361344538) 100%);
+    color: white;       
+    box-shadow: 0 0 20px grey;    
+}
+
+.winner__pic{
+    height: 110px;
+}
+
+.winner__text{
+    font-size: 45px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.winner__info{
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px;
+    background-color: rgba(251, 255, 30, 0.445);
+    box-shadow: inset 0 0 10px rgb(251, 255, 30);
+    box-shadow: 0 0 35px rgb(251, 255, 30);
+    animation: pulse 1.5s ease infinite;
+    
+}
+
+@keyframes pulse {
+    0%{
+        transform: scale(1.1);
+    }
+    40%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+
+}
