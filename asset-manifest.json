@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/Social_network_on-JS/static/css/main.c134d310.css",
-    "main.js": "/Social_network_on-JS/static/js/main.96d1bf1b.js",
+    "main.css": "/Social_network_on-JS/static/css/main.41128279.css",
+    "main.js": "/Social_network_on-JS/static/js/main.6a51b23e.js",
     "static/js/787.28cb0dcd.chunk.js": "/Social_network_on-JS/static/js/787.28cb0dcd.chunk.js",
     "static/media/sun logo.png": "/Social_network_on-JS/static/media/sun logo.79a72dd3cdd7dad138a9.png",
     "static/media/BeanEater.gif": "/Social_network_on-JS/static/media/BeanEater.b73093a68e61849a8473.gif",
     "static/media/moon logo.png": "/Social_network_on-JS/static/media/moon logo.b83d91f740182cc623f8.png",
     "static/media/user_ava.png": "/Social_network_on-JS/static/media/user_ava.6d1644ecf41addb3bd0e.png",
     "static/media/button_loading.gif": "/Social_network_on-JS/static/media/button_loading.2ce5c7c546f39287aac0.gif",
+    "static/media/krestik.png": "/Social_network_on-JS/static/media/krestik.7380e8b85184d0063152.png",
+    "static/media/nolik.png": "/Social_network_on-JS/static/media/nolik.61c38e44fb6ae995842b.png",
     "index.html": "/Social_network_on-JS/index.html",
-    "main.c134d310.css.map": "/Social_network_on-JS/static/css/main.c134d310.css.map",
-    "main.96d1bf1b.js.map": "/Social_network_on-JS/static/js/main.96d1bf1b.js.map",
+    "main.41128279.css.map": "/Social_network_on-JS/static/css/main.41128279.css.map",
+    "main.6a51b23e.js.map": "/Social_network_on-JS/static/js/main.6a51b23e.js.map",
     "787.28cb0dcd.chunk.js.map": "/Social_network_on-JS/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c134d310.css",
-    "static/js/main.96d1bf1b.js"
+    "static/css/main.41128279.css",
+    "static/js/main.6a51b23e.js"
   ]
 }
