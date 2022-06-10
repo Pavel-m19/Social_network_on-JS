@@ -7,7 +7,7 @@ html {
   width: 40px;
 }
 
-.app_wrapper {
+.app_wrapper {  
   min-height: 100vh;
   display: grid;
   max-width: min(900px, 90vw);
@@ -25,4 +25,5 @@ html {
 
 .app_wrapper_content {
   grid-area: c;  
+  position: relative;
 }

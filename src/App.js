@@ -3,7 +3,6 @@ import './App.css';
 import DialogsContainer from './components/Dialogs/Dialogs-container';
 import NavContainer from './components/Navbar/Nav-container';
 import News from './components/News/News';
-import Music from './components/Music/Music';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProfileContainer from './components/Profile/Profile-container';
 import UsersContainer from './components/Users/users-container';
@@ -15,6 +14,7 @@ import { connect } from "react-redux";
 import Preloader from './components/Common/preloader';
 import { createBrowserHistory } from "history";
 import FooterClass from './components/Footer/footer-container';
+import Applications from './components/Applications/applications';
 
 
 class App extends React.Component {
@@ -44,7 +44,8 @@ class App extends React.Component {
               <Route path='/Profile/:userID' element={<ProfileContainer />} />
               <Route path='/Profile/my' element={<ProfileContainer />} />
               <Route path='/News/*' element={<News />} />
-              <Route path='/Music/*' element={<Music />} />
+              <Route path='/Applications/:appName' element={<Applications />} />
+              <Route path='/Applications/' element={<Applications />} />
               <Route path='/Users/*' element={<UsersContainer />} />
               <Route path='/Login/*' element={<LoginContainer />} />
             </Routes>

@@ -1,6 +1,7 @@
 body {
     color:#281e09 ;
-    
+
+    --bacground: white;
     --main-border: #d3dbd9;     
     --text-color: #281e09;
     --panels-color: #026670;
@@ -23,7 +24,9 @@ body {
 
 body.night {    
     color: #c8c7c7;
-    background-color: #012a4a;
+    
+    --bacground: #012a4a;
+    background-color: var(--bacground);
 
     --main-border: #0b4470;  
     --text-color: #c8c7c7;
