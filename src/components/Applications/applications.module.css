@@ -1,34 +1,90 @@
-.apps__list_item{    
+.apps__list_item{
+    height: 38px; 
+    z-index: 1;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; 
     background-color: var(--panels-color);
     margin-right: 3px ;    
-    padding: 5px 5px 3px 5px;
     font-size: 19px;
     color: var(--nav-text-color);
 }
 
-.apps__list_item.active{    
+.apps__list_item.active{     
+    position: relative;
+    height: 40px;
+    position: relative;       
     background-color: transparent;
-    border: solid 3px var(--main-border);
-    border-bottom: solid 3px var(--bacground);
+    outline: solid 3px var(--main-border);
     color: black;
-    position: relative;    
+    /* transition: 1s;    */
+}
+.apps__list_item.active::before{  
+    position: absolute;  
+    content: '';
+    left: 0;
+    top:35px;
+    height: 9px;
+    width: 100px;
+    background-color: var(--bacground);
+    transition: 1s;
 }
 
+.activeLink{
+    color: var(--text-color);
+}
 .application__wrapper{        
     display: flex;
     justify-content: center;
-    margin-top: 3px;
-    border: solid 3px var(--main-border);   
+    align-items: center;
+    margin-top: 2px;   
+    border: solid 3px var(--main-border);  
+    transition: 0.4s; 
 }
 
-.apps__list{
-    padding: 8px 0 0 30px;
+.apps__list{    
+    padding-left: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    margin-bottom: -2px;
 }
 
 .app__page__wrapper{
-    position: absolute;
     top:0;
     bottom: 0;
     left: 0;
     right: 0;
 }
+
+.dnd__wrapper{
+    z-index: -90;    
+    max-width: 710px;
+    display: grid; 
+    grid-template-areas: 
+    'm m'
+    'm m';   
+    grid-gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+
+.dnd__element{
+    z-index: -3;
+    border-radius: 15px;    
+    /* background-color: rgb(142, 179, 179); */
+    background-color: var(--bacground);   
+    cursor: grab; 
+    height: 330px;
+    width: 330px;
+}
+
+.order__item{
+    z-index: -50;
+    height: 330px;
+    border-radius: 15px;
+    background-color: var(--bacground);
+}
+

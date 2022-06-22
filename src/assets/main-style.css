@@ -1,6 +1,7 @@
 body {
     color:#281e09 ;
-
+    background-color: var(--bacground);
+    z-index: -100;
     --bacground: white;
     --main-border: #d3dbd9;     
     --text-color: #281e09;
@@ -14,7 +15,7 @@ body {
     --night-switcher-shadow:rgb(10, 10, 143);
     --my-massage:#fed03a;
     --your-massage:#ffa250;
-    --active-login: rgb(255, 254, 249);
+    --active-login: rgb(224, 240, 231);
     
 
     --logo-shift: 0px;

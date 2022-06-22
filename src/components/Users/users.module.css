@@ -142,7 +142,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 
@@ -201,25 +201,58 @@ ul {
     display: block;
 }
 
+.search_block{   
+    padding: 5px;
+    border: solid 2px var(--main-border);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
 .choose_count{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-/* .page__number_input{    
-    box-sizing: border-box;
+.input_feild {
     background-color: var(--main-border);    
     border-radius: 20px;
     border: 1px solid var(--panels-color);
-    margin: 3px;
-    height: 30px;
-    width: 70px;    
+    height: 30px;    
+    width: 30%;    
     padding-left: 15px;
+    color: gray;
 }
 
-.page__number_input:focus {
+.input_feild:focus {
     background-color: var(--active-login);
     box-shadow: 0 0 3px var(--panels-color);
     outline: none;
-} */
+    color: black;
+}
+
+.input_feild.error,
+.input_feild:focus.error {       
+    border: solid red 1px;
+    box-shadow: 0 0 8px red
+} 
+
+.input_form_label{
+    margin-left: 10px;
+    font-weight: 700;    
+}
+
+.search_clear_button{
+    width: 30px;    
+    margin: 1px;
+    font-weight: 700;
+    background-color: rgb(165, 0, 0);
+}
+
+.search_clear_button:hover{
+    color: black
+}

@@ -11,6 +11,7 @@ const SET_USERS_SCROLL = 'SET_USERS_SCROLL';
 const FETCH_SCROLL_STATUS_CHANGER = 'FETCH_SCROLL_STATUS_CHANGER'
 const SCROLL_DELETER = 'SCROLL_DELETER'
 const SET_USERS_PER_PAGE = 'SET_USERS_PER_PAGE'
+const SET_TERM = 'SET_TERM'
 
 
 let initialState = {
@@ -21,7 +22,8 @@ let initialState = {
     currentPage: 1,
     isFetching: false,
     scrollIsFetching: false,
-    subscribeFetching: []
+    subscribeFetching: [],   
+    term: '' 
 };
 const usersReducer = (state = initialState, action) => {
 
@@ -75,6 +77,9 @@ const usersReducer = (state = initialState, action) => {
         case SET_USERS_PER_PAGE: {
             return {...state, pageSize: action.count, currentPage: action.number }
         }
+        case SET_TERM: {
+            return {...state, term: action.term}
+        }
         default: return state
     }
 }
@@ -105,13 +110,15 @@ export const scrollUsersDelete = () => ({type: SCROLL_DELETER})
 
 export const setUsersPerPage = (count, number) => ({type: SET_USERS_PER_PAGE, count, number})
 
+export const setTerm = (term) => ({type: SET_TERM, term})
+
 //thunks
 
-export const getUsersThunkCreator = (currentPage, pageSize) => {
+export const getUsersThunkCreator = (term, currentPage, pageSize) => {
     return (dispatch) => {
         dispatch(fetchStatus(true))
         dispatch(setUsers([]));        
-        getUsersAPI(currentPage, pageSize).then(resp => {
+        getUsersAPI(term, currentPage, pageSize).then(resp => {
             dispatch(fetchStatus(false));
             dispatch(setUsers(resp.items))
             dispatch(usersCount(resp.totalCount))
@@ -133,11 +140,11 @@ export const subscriberThunkCreator = (method, user) => {
     }
 }
 
-export const getUsersScrollThunkCreator = (currentPage, pageSize) => {
+export const getUsersScrollThunkCreator = (term, currentPage, pageSize) => {
     return (dispatch) => {
         dispatch(fetchScrollStatus(true))
         
-        getUsersAPI((currentPage + 1), pageSize).then(resp => {
+        getUsersAPI(term, (currentPage + 1), pageSize).then(resp => {
             
             dispatch(setUsersScroll(resp.items))
             dispatch(usersCount(resp.totalCount))
