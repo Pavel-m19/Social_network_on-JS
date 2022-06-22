@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap");
+
+.clock__container {    
+    height: 300px;
+    width: 300px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 0 8px black;
+    border-radius: 15px;
+    background-color: rgb(230, 230, 230);
+}
+
+.clock {
+    background-color: rgb(230, 230, 230);
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+                inset 5px 10px 15px  rgba(0, 0, 0, 0.4),                 
+                inset -5px -10px 15px  rgba(0, 0, 0, 0.2);
+}
+
+.clock::before {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #37383d;
+    border-radius: 50%;
+}
+
+.seconds_center {
+    z-index: 2000;
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    border: solid 13px red;
+    background-color: rgb(50, 50, 50);
+    border-radius: 50%;
+    transform: scale(0.2);
+}
+
+.clock span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    position: absolute;
+    color: rgb(1, 1, var(--i));
+    inset: -24px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock span::before {
+    position: absolute;
+    font-weight: 700;
+    content: "|";
+    font-size: 10px;
+    inset: 22px;
+}
+
+.clock span p {
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.circle1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.circle i::before {
+    z-index: 1000;
+    border-radius: 3px;
+    position: absolute;
+    top: 105px;
+    content: "";
+    background-color: red;
+    height: 30px;
+    width: 2px;
+}
+
+.circle2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.circle i,
+.circle1 i,
+.circle2 i {
+    position: absolute;
+    height: 50%;
+    width: 2px;
+    transform-origin: bottom;
+    border-radius: 3px;
+}
+
+.circle i {
+    z-index: 1000;
+    border-radius: 100px;
+    background-color: red;
+    transform: rotate(calc(6deg * var(--sec)));
+}
+
+.circle1 i {
+    background-color: #37383d;
+    transform: rotate(calc(6deg * var(--min)));
+    width: 4px;
+}
+.circle2 i {
+    background-color: #37383d;
+    transform: rotate(calc(30deg * var(--hour)));
+    width: 5px;
+}
+
+.circle2 i::before {
+    border-radius: 2px;
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    content: "";
+    background-color: rgb(201, 201, 201);
+    height: 40px;
+    width: 1px;
+}
+
+.circle1 i::before {
+    border-radius: 2px;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    content: "";
+    background-color: rgb(191, 191, 191);
+    height: 50px;
+    width: 2px;
+}
