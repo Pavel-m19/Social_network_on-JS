@@ -65,7 +65,7 @@ let TimerBlock = () => {
 
 
         <div className={s.timer__around}>
-            <div className={s.dots}></div>
+            <div className={s.dot}></div>
             <svg>
                 <circle cx='150' cy='150' r='140'></circle>
                 <circle cx='150' cy='150' r='140' ></circle>
@@ -86,11 +86,11 @@ let TimerBlock = () => {
                     <div className={s.timer__value}>{timerInitial % 60 < 10 ? `0${timerInitial % 60}` : timerInitial % 60}</div>
                 </div>
             </div>
-            <div className={s.button__wrapper}>
-                <button onClick={timerSetter} className={s.timer__button} disabled={timerInitial < 1}>{timerStarted ? 'pause' : 'start'}</button>
-                <button onClick={timerReset} className={s.timer__button}>reset</button>
-            </div>
-
+            <div style={{height: "45px"}}></div>
+        </div>
+        <div className={s.button__wrapper}>
+            <button onClick={timerSetter} className={s.timer__button} disabled={timerInitial < 1}>{timerStarted ? 'pause' : 'start'}</button>
+            <button onClick={timerReset} className={s.timer__button}>reset</button>
         </div>
     </div>
 }

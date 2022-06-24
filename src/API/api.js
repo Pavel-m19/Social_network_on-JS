@@ -63,3 +63,8 @@ export const upploadPhotoAPI = (imageFile) => {
     })
     return response
 }
+
+export const weatherAPI = () => {
+    let response = axios.get('https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=6c2cac011cc7c0a2eb3436af150cad59').then((response) => console.log(response))
+   return response
+}
