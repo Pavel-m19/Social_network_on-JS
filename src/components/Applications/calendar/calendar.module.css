@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.calendar_wrapper {
+    color: black;
+    z-index: 0;    
+    height: 330px;
+    width: 330px;    
+    position: relative;
+    box-shadow: 0 0 8px black;
+    border-radius: 15px;
+    background-color: rgb(230, 230, 230);
+}
+
+.calendar_current_date{
+    border-radius: 15px 15px 0  0;
+    height: 90px;
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    padding: 0px 25px 5px 25px;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar_current_day{
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 55px;
+}
+
+.calendar_current_month_n_week{
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: end;
+}
+
+.calendar_current_month{
+    font-size: 30px;
+    line-height: 32px;
+}
+
+.calendar_current_week_day{
+    line-height: 27px;
+}
+
+.calendar_weekend_item{
+    color: red;
+}
+
+.calendar_table_weekdays_wrapper{
+    padding: 10px 20px 0 20px ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.calendar_table_week{
+    width: 290px;
+    padding: 5px 20px 0 20px ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar_table_weekday_item{
+    width: 30px;
+    line-height: 21px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.calendar_table_month_year{    
+    margin-left: 5%;
+    width: 90%;
+    font-weight: 700;
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+    border-bottom:solid 2px #f78ca0;
+}
+
+.calendar_table_tooday{
+    outline: solid 4px #f78ca0;
+    border-radius: 5px;
+}
+
+.calendar_table_not_current_month{
+    color: rgb(177, 177, 177);
+}
+
+.calendar_left_arrow img{
+    height: 20px;
+}
+
+.calendar_right_arrow img{
+    height: 20px;
+    transform: rotate(180deg);
+}
+
+.calendar_left_arrow{
+    z-index: 2;
+    cursor: pointer;    
+    left: 0;
+    position: absolute;
+    padding: 65% 5px 10px 10px;   
+}
+
+.calendar_right_arrow{
+    z-index: 2;
+    cursor: pointer; 
+    right: 0;
+    position: absolute;
+    padding: 65% 5px 10px 10px; 
+}
+
+.animation_wrapper{
+    position: relative;
+}
+
+.animation_element{
+    position: absolute;
+}
