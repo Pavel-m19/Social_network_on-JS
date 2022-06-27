@@ -3,12 +3,12 @@ import { useState } from "react";
 import s from './calendar.module.css'
 import calendar_arrow from '../../../assets/calendar_arrow.png'
 import { motion, AnimatePresence } from "framer-motion"
-import { weatherAPI } from "../../../API/api";
+import Weather from "./weather/weather";
 
 const variants = {
     enter: (direction) => {
         return {
-            x: direction > 0 ? 100 : -100,
+            x: direction > 0 ? 70 : -70,
             opacity: 0
         };
     },
@@ -19,7 +19,7 @@ const variants = {
     exit: (direction) => {
         return {
             zIndex: 0,
-            x: direction < 0 ? 100 : -100,
+            x: direction < 0 ? 70 : -70,
             opacity: 0
         };
     }
@@ -127,7 +127,6 @@ let Calendar = () => {
         }
 
     }
-    console.log(weatherAPI())
 
     return <div className={s.calendar_wrapper}>
         <div className={s.calendar_left_arrow} onClick={() => monthChanger(-1)}>
@@ -138,10 +137,12 @@ let Calendar = () => {
         </div>
         <div className={s.calendar_current_date}>
             <div className={s.calendar_current_day}>{now.getDate()}</div>
+            
             <div className={s.calendar_current_month_n_week}>
                 <div className={s.calendar_current_month}>{monthes[now.getMonth()].name}</div>
                 <div className={s.calendar_current_week_day}>{weekdays[now.getDay() - 1]}</div>
             </div>
+            <Weather/>
         </div>
         <div className={s.calendar_table}>
             <div className={s.calendar_table_month_year}>{`${tableYear} ${monthes[tableMonth].name}`}</div>
@@ -160,7 +161,7 @@ let Calendar = () => {
                         exit="exit"
                         transition={{
                             x: { type: "spring", stiffness: 140, damping: 13.5 },
-                            duration: 0.3,
+                            duration: 0.1,
                         }}
                     > <div>{MonthGenerator(tableMonth, tableYear).map(week => <WeekItem week={week} tooday={now.getDate()} />)}</div>
                     </motion.div>

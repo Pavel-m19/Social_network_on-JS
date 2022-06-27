@@ -30,11 +30,12 @@
 }
 
 .calendar_current_month_n_week{
-    height: 67px;
+    height: 60px;
+    width: 70px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    text-align: end;
+    text-align: start;
 }
 
 .calendar_current_month{

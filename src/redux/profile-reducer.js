@@ -183,7 +183,6 @@ export const avatarChangeThunkCreator = (photo) => {
     return (dispatch) => {
         dispatch(avatarFetcher(true))
 
-
         upploadPhotoAPI(photo)
         .then(resp => {            
             dispatch(newAvatar(resp.data.data.photos))
