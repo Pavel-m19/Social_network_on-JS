@@ -12,7 +12,7 @@ let Weather = () => {
 
     useEffect(() => {
         if (!weatherNow) {
-            weatherAPI().then(resp => setWeatherNow(resp.data)).then(console.log(weatherNow))
+            weatherAPI().then(resp => setWeatherNow(resp.data))
         }
     })
 

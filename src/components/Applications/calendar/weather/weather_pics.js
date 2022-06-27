@@ -25,32 +25,33 @@ let conditions = {
 
 export const weatherLogoChoiser = (weather, time) => {
 
-    let condition
-    if (weather < 300) {
-        condition = 'lightning'
-    } else if (299 < weather && weather < 400) {
-        condition = 'hardRain'
-    } else if (499 < weather && weather < 512) {
-        condition = 'lightRain'
-    } else if (520 < weather && weather < 532) {
-        condition = 'hardRain'
-    } else if (599 < weather && weather < 622) {
-        condition = 'snow'
-    } else if (699 < weather && weather < 800) {
-        condition = 'fog'
-    } else if (weather === 800) {
-        condition = 'clear'
-    } else if (802 === weather) {
-        condition = 'clouds'
-    } else if (802 < weather) {
-        condition = 'hardClouds'
-    }
 
-    console.log(condition)
+    if (weather) {
+        let condition
+        if (weather < 300) {
+            condition = 'lightning'
+        } else if (299 < weather && weather < 400) {
+            condition = 'hardRain'
+        } else if (499 < weather && weather < 512) {
+            condition = 'lightRain'
+        } else if (520 < weather && weather < 532) {
+            condition = 'hardRain'
+        } else if (599 < weather && weather < 622) {
+            condition = 'snow'
+        } else if (699 < weather && weather < 800) {
+            condition = 'fog'
+        } else if (weather === 800) {
+            condition = 'clear'
+        } else if (802 === weather) {
+            condition = 'clouds'
+        } else if (802 < weather) {
+            condition = 'hardClouds'
+        }
 
-    if (4 < time < 21) {
-        return conditions[condition].day
-    } else {
-        return conditions[condition].night
+        if (4 < time < 21) {
+            return conditions[condition].day
+        } else {
+            return conditions[condition].night
+        }
     }
 }
