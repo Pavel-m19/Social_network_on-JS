@@ -1,22 +1,34 @@
 {
   "files": {
-    "main.css": "/Social_network_on-JS/static/css/main.67da97a7.css",
-    "main.js": "/Social_network_on-JS/static/js/main.b06de6f3.js",
+    "main.css": "/Social_network_on-JS/static/css/main.cb6ebb7f.css",
+    "main.js": "/Social_network_on-JS/static/js/main.1cb055f3.js",
     "static/js/787.28cb0dcd.chunk.js": "/Social_network_on-JS/static/js/787.28cb0dcd.chunk.js",
     "static/media/sun logo.png": "/Social_network_on-JS/static/media/sun logo.79a72dd3cdd7dad138a9.png",
     "static/media/BeanEater.gif": "/Social_network_on-JS/static/media/BeanEater.b73093a68e61849a8473.gif",
     "static/media/moon logo.png": "/Social_network_on-JS/static/media/moon logo.b83d91f740182cc623f8.png",
     "static/media/user_ava.png": "/Social_network_on-JS/static/media/user_ava.6d1644ecf41addb3bd0e.png",
+    "static/media/cloudy-night.png": "/Social_network_on-JS/static/media/cloudy-night.6e23098028980ffb7ee0.png",
     "static/media/button_loading.gif": "/Social_network_on-JS/static/media/button_loading.2ce5c7c546f39287aac0.gif",
+    "static/media/cloudy-day.png": "/Social_network_on-JS/static/media/cloudy-day.3aba5b1decbf0f0b5f41.png",
+    "static/media/light_rain.png": "/Social_network_on-JS/static/media/light_rain.7daa5082cf5352a5601d.png",
+    "static/media/light-rain-night.png": "/Social_network_on-JS/static/media/light-rain-night.7b245e86ac48a3a22678.png",
+    "static/media/lighting.png": "/Social_network_on-JS/static/media/lighting.2342a0639878a0129a4b.png",
+    "static/media/clouds.png": "/Social_network_on-JS/static/media/clouds.740b367de1f85c0c0060.png",
+    "static/media/hard_clouds.png": "/Social_network_on-JS/static/media/hard_clouds.48fd151ab47685982bd5.png",
+    "static/media/fog.png": "/Social_network_on-JS/static/media/fog.9cc6da994f00eac904c7.png",
+    "static/media/moon.png": "/Social_network_on-JS/static/media/moon.4a65adff455bec464e54.png",
+    "static/media/hard_rain.png": "/Social_network_on-JS/static/media/hard_rain.91361dcbac9da6b0c5cf.png",
+    "static/media/sunny.png": "/Social_network_on-JS/static/media/sunny.2810660fdb90edb92ce7.png",
+    "static/media/snow.png": "/Social_network_on-JS/static/media/snow.fa3ece7e5eeb61f7f2b2.png",
     "static/media/krestik.png": "/Social_network_on-JS/static/media/krestik.7380e8b85184d0063152.png",
     "static/media/nolik.png": "/Social_network_on-JS/static/media/nolik.61c38e44fb6ae995842b.png",
     "index.html": "/Social_network_on-JS/index.html",
-    "main.67da97a7.css.map": "/Social_network_on-JS/static/css/main.67da97a7.css.map",
-    "main.b06de6f3.js.map": "/Social_network_on-JS/static/js/main.b06de6f3.js.map",
+    "main.cb6ebb7f.css.map": "/Social_network_on-JS/static/css/main.cb6ebb7f.css.map",
+    "main.1cb055f3.js.map": "/Social_network_on-JS/static/js/main.1cb055f3.js.map",
     "787.28cb0dcd.chunk.js.map": "/Social_network_on-JS/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67da97a7.css",
-    "static/js/main.b06de6f3.js"
+    "static/css/main.cb6ebb7f.css",
+    "static/js/main.1cb055f3.js"
   ]
 }
