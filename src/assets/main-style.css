@@ -15,7 +15,7 @@ body {
     --night-switcher-shadow:rgb(10, 10, 143);
     --my-massage:#fed03a;
     --your-massage:#ffa250;
-    --active-login: rgb(224, 240, 231);
+    --active-login: rgb(247, 252, 249);
     
 
     --logo-shift: 0px;
@@ -40,7 +40,7 @@ body.night {
     --my-massage:#00707c;
     --your-massage:#6000a9;
     --night-switcher-shadow: #f9cb00;
-    --active-login: rgb(199, 213, 255);
+    --active-login: rgb(217, 226, 252);
     
     --logo-shift: 35px;
 

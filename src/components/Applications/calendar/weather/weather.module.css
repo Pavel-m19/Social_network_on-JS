@@ -1,9 +1,10 @@
 .weather__wrapper{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    position: relative; 
-    width: 120px;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between; 
+    width: 125px;
 }
 
 .clouds_weather_pic{
@@ -12,13 +13,15 @@
 
 
 .weather_pic{
-    margin-left: 80px;
     height: 50px;
 }
 
 .weather__temp{
     z-index: 2;
-    font-size: 20px;
-    margin-top: 5px;
-    margin-bottom: -5px;
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+.weather_location{
+    line-height: 17px;
 }

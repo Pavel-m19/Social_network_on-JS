@@ -1,4 +1,4 @@
-import { profileAPI, newStatusAPI, getStatusAPI, upploadPhotoAPI } from '../API/api'
+import { profileAPI, newStatusAPI, getStatusAPI, upploadPhotoAPI, upploadProfileInfoAPI } from '../API/api'
 
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
@@ -7,9 +7,10 @@ const SET_USER_PAGE = 'SET_USER_PAGE';
 const PAGE_FETCHER = 'PAGE_FETCHER';
 const UPDATE_STATUS_TEXT = 'UPDATE_STATUS_TEXT';
 const SET_STATUS = 'SET_STATUS';
-const STATUS_FETCHER = 'STATUS_FETCHER'
-const NEW_AVATAR="NEW_AVATAR"
-const AVATAR_FETCHER = 'AVATAR_FETCHER'
+const STATUS_FETCHER = 'STATUS_FETCHER';
+const NEW_AVATAR="NEW_AVATAR";
+const AVATAR_FETCHER = 'AVATAR_FETCHER';
+const INFO_FETCHER = "INFO_FETCHER";
 
 let initialState = {
     posts: [
@@ -25,6 +26,7 @@ let initialState = {
         active: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png'
     },
     userPageFetch: true,
+    userInfoFetch: false,
     status: '',
     statusFetch: false, 
     avatarFetch: false, 
@@ -91,6 +93,9 @@ const profileReducer = (state = initialState, action) => {
         case AVATAR_FETCHER: {
             return {...state, avatarFetch: action.status }
         }
+        case INFO_FETCHER: {
+            return {...state, userInfoFetch: action.status}
+        }
         default: return state
     }
 }
@@ -148,6 +153,11 @@ export const avatarFetcher = (status) => ({
     status
 })
 
+export const infoFetcher = (status) => ({
+    type: INFO_FETCHER,
+    status
+})
+
 export const statusPostThunkCreator = (status) => {
     return (dispatch) => {    
         dispatch(statusFetcer(true))    
@@ -161,6 +171,7 @@ export const statusPostThunkCreator = (status) => {
 }
 
 export const profileThunkCreator = (userId) => {
+    console.log('prof_thunk')
     return (dispatch) => {
         dispatch(userPageFetcher(true))           
 
@@ -189,6 +200,35 @@ export const avatarChangeThunkCreator = (photo) => {
             dispatch(avatarFetcher(false))
         })
 
+    }
+}
+
+export const profileInfoUpploaderThunkCreator = (object, id, name) => {
+    let userData = {
+        "aboutMe": object.aboutMe,
+        "contacts": {
+            facebook: null,
+            github: null,
+            instagram: object.insta,
+            mainLink: null,
+            twitter: null,
+            vk: object.VK,
+            website: null,
+            youtube: object.youtube
+        },
+        "lookingForAJob": true,
+        "lookingForAJobDescription": object.job,
+        "fullName": name
+    }
+    
+    return (dispatch) => {
+        dispatch(infoFetcher(true))
+        
+        upploadProfileInfoAPI(userData)
+        .then(resp => {            
+            dispatch(profileThunkCreator(id))
+            dispatch(infoFetcher(false))            
+        })
     }
 }
 export default profileReducer;

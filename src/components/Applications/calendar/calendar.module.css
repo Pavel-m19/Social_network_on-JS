@@ -11,16 +11,24 @@
     background-color: rgb(230, 230, 230);
 }
 
-.calendar_current_date{
+.calendar_current_date_n_weather{
     border-radius: 15px 15px 0  0;
     height: 90px;
     background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    padding: 0px 25px 5px 25px;
+    padding: 0px 20px 5px 20px;
     font-family: 'Lato', sans-serif;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.calendar_current_date{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 .calendar_current_day{
@@ -31,7 +39,7 @@
 
 .calendar_current_month_n_week{
     height: 60px;
-    width: 70px;
+    width: 85px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;

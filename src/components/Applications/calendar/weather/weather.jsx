@@ -6,23 +6,35 @@ import { weatherLogoChoiser } from "./weather_pics";
 
 
 let Weather = () => {
-
     let now = new Date();
-    let [weatherNow, setWeatherNow] = useState(null)    
+    let [weatherNow, setWeatherNow] = useState(null)
+    let [coords, setCoords] = useState({lat:'',lon:''})
+
+    let pos = (position) => {
+        if(!coords.lat){setCoords({lat: position.coords.latitude, lon: position.coords.longitude})}
+    }
+
+    navigator.geolocation.getCurrentPosition(pos);
+
+    
 
     useEffect(() => {
         if (!weatherNow) {
-            weatherAPI().then(resp => setWeatherNow(resp.data))
+            weatherAPI(coords.lat, coords.lon).then(resp => setWeatherNow(resp.data))
+            console.log("render")
         }
     })
 
-    return <div className={s.weather__wrapper}>
-        {weatherNow ?
+    return <div>
+        {weatherNow ? <div className={s.weather__wrapper}>
+
             <div className={s.weather__temp}>{Math.round(weatherNow.main.temp - 273) + "\u00b0C"}</div>
-            : ''}
-        {weatherNow ?
-            <img src={weatherLogoChoiser(weatherNow.weather[0].id, now.getHours())} alt='sun' className={s.weather_pic} /> :
-            ''}
+            <div>
+                <img src={weatherLogoChoiser(weatherNow.weather[0].id, now.getHours())} alt='sun' className={s.weather_pic} />
+                <div className={s.weather_location}>{weatherNow.name}</div>
+            </div>
+
+        </div> : ''}
     </div>
 }
 

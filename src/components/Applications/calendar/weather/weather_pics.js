@@ -24,8 +24,6 @@ let conditions = {
 }
 
 export const weatherLogoChoiser = (weather, time) => {
-    console.log(weather)
-
     if (weather) {
         let condition
         if (weather < 300) {
@@ -46,14 +44,13 @@ export const weatherLogoChoiser = (weather, time) => {
             condition = 'clouds'
         } else if (802 < weather) {
             condition = 'hardClouds'
-        }else if (801 === weather) {
+        } else if (801 === weather) {
             condition = 'lightClouds'
         }
 
         if (3 < time && time < 20) {
             return conditions[condition].day
         } else {
-            console.log(time)
             return conditions[condition].night
         }
     }

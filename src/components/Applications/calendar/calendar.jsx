@@ -25,7 +25,6 @@ const variants = {
     }
 };
 
-
 let Calendar = () => {
 
     let now = new Date();
@@ -52,7 +51,7 @@ let Calendar = () => {
     const WeekdayItem = ({ day, tooday, currentMonth, weekend }) => {
 
         let weekendCheck = ((day === 'SAT') || (day === 'SUN') || weekend);
-        let toodayCheck = (tooday === day && tableMonth === now.getMonth() && tableYear === now.getFullYear())
+        let toodayCheck = (tooday === day && tableMonth === now.getMonth() && tableYear === now.getFullYear() && currentMonth )
 
         return <div className={
             s.calendar_table_weekday_item + ' ' +
@@ -135,12 +134,14 @@ let Calendar = () => {
         <div className={s.calendar_right_arrow} onClick={() => monthChanger(1)}>
             <img src={calendar_arrow} alt="<>" />
         </div>
-        <div className={s.calendar_current_date}>
-            <div className={s.calendar_current_day}>{now.getDate()}</div>
-            
-            <div className={s.calendar_current_month_n_week}>
-                <div className={s.calendar_current_month}>{monthes[now.getMonth()].name}</div>
-                <div className={s.calendar_current_week_day}>{weekdays[now.getDay() - 1]}</div>
+        <div className={s.calendar_current_date_n_weather}>
+            <div className={s.calendar_current_date}>
+                <div className={s.calendar_current_day}>{now.getDate()}</div>
+                
+                <div className={s.calendar_current_month_n_week}>
+                    <div className={s.calendar_current_month}>{monthes[now.getMonth()].name}</div>
+                    <div className={s.calendar_current_week_day}>{weekdays[now.getDay() - 1]}</div>
+                </div>
             </div>
             <Weather/>
         </div>
@@ -163,7 +164,7 @@ let Calendar = () => {
                             x: { type: "spring", stiffness: 140, damping: 13.5 },
                             duration: 0.1,
                         }}
-                    > <div>{MonthGenerator(tableMonth, tableYear).map(week => <WeekItem week={week} tooday={now.getDate()} />)}</div>
+                    > <div>{MonthGenerator(tableMonth, tableYear).map(week => <WeekItem week={week} tooday={now.getDate()}/>)}</div>
                     </motion.div>
                 </AnimatePresence>
             </div>

@@ -1,0 +1,50 @@
+.info_feild{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+}
+
+.user_info_block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 330px;
+    height: 260px;
+    padding: 10px;
+    border: solid 3px var(--main-border);
+}
+
+.contacts_info_wrapper{
+    padding-left: 30px;
+}
+
+.input_feild {
+    background-color: var(--main-border);    
+    border-radius: 20px;
+    border: 1px solid var(--panels-color);
+    height: 30px;    
+    width: 150px;    
+    padding-left: 15px;
+    color: var(--text-color);
+}
+
+.input_feild:focus {
+    background-color: var(--active-login);
+    box-shadow: 0 0 3px var(--panels-color);
+    outline: none;
+    color: black;
+}
+
+.input_feild.error,
+.input_feild:focus.error {       
+    border: solid red 1px;
+    box-shadow: 0 0 8px red
+} 
+
+.input_form_label{
+    margin-right: 10px;
+    font-weight: 700;    
+}

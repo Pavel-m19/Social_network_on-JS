@@ -12,6 +12,7 @@ html {
   display: grid;
   max-width: min(900px, 90vw);
   margin: auto;
+  transition: 0.5s;
 
   grid-template-areas:
     'h h '

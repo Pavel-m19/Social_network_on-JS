@@ -1,5 +1,5 @@
 import Profile from "./Profile";
-import { avatarChangeThunkCreator,addLike, addPost, updatePost, profileThunkCreator, statusPostThunkCreator } from "../../redux/profile-reducer";
+import { avatarChangeThunkCreator,addLike, addPost, updatePost, profileThunkCreator, statusPostThunkCreator, profileInfoUpploaderThunkCreator } from "../../redux/profile-reducer";
 import { connect } from "react-redux";
 import React from "react";
 import { useParams } from "react-router-dom";
@@ -48,6 +48,7 @@ export default compose(connect(stateToProps, {
   profileThunkCreator,
   statusPostThunkCreator,
   avatarChangeThunkCreator,
+  profileInfoUpploaderThunkCreator,
 }), withAuthRedirect)
   (ProfileContainerWithRouter)
 

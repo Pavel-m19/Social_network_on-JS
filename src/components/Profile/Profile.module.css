@@ -5,12 +5,16 @@ img{
 h2{
     margin-bottom: 5px ;
 }
+b{
+    line-height: 24px;
+    margin-right: 8px;
+}
 .content{
     grid-area: c;
 }  
 
 .postHeader{
-    padding: 5px 10px 0 0;
+    padding: 5px 10px 10px 0;
 }
 
 .post__wrapper {
@@ -43,7 +47,8 @@ h2{
     width: 330px;    
     position:absolute;
     background-color: rgba(0, 0, 0, 0.548);
-    color: white;       
+    color: white; 
+    cursor: pointer;      
 }
 
 .new__ava__info{
@@ -77,6 +82,10 @@ h2{
     display: flex;    
     flex-direction: column;
     justify-content:space-around
+}
+
+.contacts_block{
+    margin: 10px 0 10px 20px;
 }
 
 
