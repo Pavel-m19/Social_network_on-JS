@@ -13,6 +13,7 @@
     "formic": "^0.0.10",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.11",
+    "node-sass": "^6.0.1",
     "react": "^18.1.0",
     "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^18.1.0",
@@ -27,6 +28,7 @@
     "redux-thunk": "^2.4.1",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4",
+    "webpack": "^5.73.0",
     "yup": "^0.32.11"
   },
   "scripts": {

@@ -134,14 +134,14 @@ let Calendar = () => {
         <div className={s.calendar_right_arrow} onClick={() => monthChanger(1)}>
             <img src={calendar_arrow} alt="<>" />
         </div>
-        <div className={s.calendar_current_date_n_weather}>
-            <div className={s.calendar_current_date}>
-                <div className={s.calendar_current_day}>{now.getDate()}</div>
-                
-                <div className={s.calendar_current_month_n_week}>
-                    <div className={s.calendar_current_month}>{monthes[now.getMonth()].name}</div>
-                    <div className={s.calendar_current_week_day}>{weekdays[now.getDay() - 1]}</div>
-                </div>
+        <div className={s.calendar_current_date_n_weather_wrapper}>
+            <div className={s.calendar_current_date_wrapper}>
+                    <div className={s.calendar_current_day}>{now.getDate()}</div>
+                    
+                    <div className={s.calendar_current_month_n_week}>
+                        <div className={s.calendar_current_month}>{monthes[now.getMonth()].name}</div>
+                        <div className={s.calendar_current_week_day}>{weekdays[now.getDay() - 1]}</div>
+                    </div>
             </div>
             <Weather/>
         </div>

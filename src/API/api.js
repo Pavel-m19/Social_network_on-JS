@@ -69,8 +69,6 @@ export const upploadProfileInfoAPI = (profileInfo) => {
 }
 
 export const weatherAPI = (lat, lon) => {
-
-    axios.get("//ipinfo.io/195.19.57.223?token=93057a6c16c5e2").then(response => console.log(response))
     let response
     if (!lat) {
         response = axios.get('https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=6c2cac011cc7c0a2eb3436af150cad59')

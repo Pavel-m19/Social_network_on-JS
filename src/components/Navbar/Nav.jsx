@@ -8,7 +8,7 @@ const Nav = (props) => {
     <NavLink to={`/Profile/my`} className={navData => navData.isActive ? n.activeLink : n.item}>profile</NavLink>
     <NavLink to='/Dialog' className={navData => navData.isActive ? n.activeLink : n.item}>massages</NavLink>
     <NavLink to='/News' className={navData => navData.isActive ? n.activeLink : n.item}>news</NavLink>
-    <NavLink to='/Applications' end={false} className={navData => navData.isActive ? n.activeLink : n.item}>Applications</NavLink>
+    <NavLink to='/Applications/krestiki' end={false} className={navData => navData.isActive ? n.activeLink : n.item}>Applications</NavLink>
     <div className={n.item}></div>
     <NavLink to='/Users' className={navData => navData.isActive ? n.activeLink : n.item}>users</NavLink>
   </nav>

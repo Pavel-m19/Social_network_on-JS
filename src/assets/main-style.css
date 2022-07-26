@@ -1,7 +1,6 @@
 body {
     color:#281e09 ;
     background-color: var(--bacground);
-    z-index: -100;
     --bacground: white;
     --main-border: #d3dbd9;     
     --text-color: #281e09;
@@ -15,8 +14,7 @@ body {
     --night-switcher-shadow:rgb(10, 10, 143);
     --my-massage:#fed03a;
     --your-massage:#ffa250;
-    --active-login: rgb(247, 252, 249);
-    
+    --active-login: rgb(247, 252, 249);    
 
     --logo-shift: 0px;
 
@@ -24,11 +22,9 @@ body {
 }
 
 body.night {    
-    color: #c8c7c7;
-    
+    color: #c8c7c7;    
     --bacground: #012a4a;
     background-color: var(--bacground);
-
     --main-border: #0b4470;  
     --text-color: #c8c7c7;
     --panels-color: #25567B;
@@ -44,5 +40,5 @@ body.night {
     
     --logo-shift: 35px;
 
-
+    transition: 1s;
 }

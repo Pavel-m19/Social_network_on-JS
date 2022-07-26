@@ -14,18 +14,29 @@ let ProfileInfo = (props) => {
                 <div>
                     <b>Instagram:</b>
                     <span>
-                        <a href={`https://www.${props.profilePage.userPage.contacts.instagram}`}>
-                            {props.profilePage.userPage.contacts.instagram}
+                        <a href={`${props.profilePage.userPage.contacts.instagram}`}
+                            className={p.contacts_link}>
+                            {props.profilePage.userPage.contacts.instagram ? 'instagram.com/...' : ''}
                         </a>
                     </span>
                 </div>
                 <div>
                     <b>VK:</b>
-                    <span>{props.profilePage.userPage.contacts.vk}</span>
+                    <span>
+                        <a href={`${props.profilePage.userPage.contacts.vk}`}
+                            className={p.contacts_link}>
+                            {props.profilePage.userPage.contacts.vk ? 'vk.com/...' : ''}
+                        </a>
+                    </span>
                 </div>
                 <div>
                     <b>YouTube:</b>
-                    <span>{props.profilePage.userPage.contacts.youtube}</span>
+                    <span>
+                        <a href={`${props.profilePage.userPage.contacts.youtube}`}
+                            className={p.contacts_link}>
+                            {props.profilePage.userPage.contacts.youtube ? 'youtube.com/...' : ''}
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>

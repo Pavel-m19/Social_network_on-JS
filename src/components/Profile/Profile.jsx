@@ -80,7 +80,6 @@ const Profile = (props) => {
   }
 
   const profileEditor = (status) => {
-    console.log('edit')
     setProfileInfoEdit(status)
   }  
 

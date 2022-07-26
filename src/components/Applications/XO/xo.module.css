@@ -7,10 +7,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background: rgb(236, 234, 230);
+    box-shadow: inset 5px 5px 10px rgb(133, 133, 133),
+                inset -5px -5px 5px rgb(168, 168, 168)
 }
 
 .box:hover {
-    background-color: var(--main-border) ;
+    background-color: rgb(247, 253, 167) ;
+    box-shadow: inset 5px 5px 10px rgba(221, 221, 221, 0.815),
+                inset -5px -5px 10px rgba(68, 68, 68, 0.575)
 }
 
 .row {
@@ -18,10 +23,10 @@
     flex-direction: row;
 }
 
-.area__wrapper{    
+.area__wrapper{  
+    margin-top: 15%;  
     align-items: center;
     flex-direction: column;    
-    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     width: 100%;

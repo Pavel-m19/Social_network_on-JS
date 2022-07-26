@@ -1,19 +1,29 @@
 import React from "react";
 import { useFormik } from "formik";
 import s from "./ProfileForm.module.css"
+import u from "../Users/users.module.css"
+import { useEffect } from "react";
 
 let ProfileInfoForm = (props) => {
 
-    const submiter = (values) => {
-        props.profileEditor(false);
+    const listener = (e) => {         
+        if (e.key==='Escape'||e.key==='Esc') {
+            e.preventDefault();
+            closer()
+        }   
+    }
 
+    const closer = () => {
+        props.profileEditor(false);
+        document.body.removeEventListener('keydown', listener, false)
+    }
+
+    const submiter = (values) => {
+        closer();
         props.profileInfoUpploaderThunkCreator(values,
             props.profilePage.currentId,
             props.profilePage.userPage.fullName)
-        
-
     }
-
 
     const former = useFormik({
         initialValues: {
@@ -27,6 +37,10 @@ let ProfileInfoForm = (props) => {
             submiter(values)
         },
     });
+
+    useEffect(() => {
+        document.body.addEventListener('keydown', listener, false)
+    })
 
     return <form onSubmit={former.handleSubmit} className={s.user_info_block}>
         <div className={s.user_info_wrapper}>
@@ -94,7 +108,15 @@ let ProfileInfoForm = (props) => {
 
         </div>
 
-        <button type="submit" disabled={!former.dirty}>submit</button>
+        <div className={s.buttons_wrapper}>
+            <button type="submit" disabled={!former.dirty}>submit</button>
+            <button
+                type="reset"
+                onClick={() => closer()}
+                className={u.search_clear_button}>
+                X
+            </button>
+        </div>
 
     </form>
 

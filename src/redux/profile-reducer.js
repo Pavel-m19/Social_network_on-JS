@@ -171,7 +171,6 @@ export const statusPostThunkCreator = (status) => {
 }
 
 export const profileThunkCreator = (userId) => {
-    console.log('prof_thunk')
     return (dispatch) => {
         dispatch(userPageFetcher(true))           
 

@@ -29,7 +29,8 @@ b{
 .user__info{
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    height: 380px;
 }
 
 .avatar__block{
@@ -70,22 +71,26 @@ b{
     pointer-events: none;
 }
 
-.profile__info{    
-    margin-left: 50px;
+.profile__info{        
     display: flex;
     flex-direction: column;
     justify-content:space-between;
 }
 
-.profile__text_info{  
-     
+.profile__text_info{ 
+    min-width: 356px; 
+    height: 330px;     
     display: flex;    
     flex-direction: column;
-    justify-content:space-around
+    justify-content:space-between
 }
 
 .contacts_block{
     margin: 10px 0 10px 20px;
+}
+
+.contacts_link{
+    color: var(--text-color);
 }
 
 

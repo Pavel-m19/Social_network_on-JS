@@ -8,15 +8,15 @@ import { weatherLogoChoiser } from "./weather_pics";
 let Weather = () => {
     let now = new Date();
     let [weatherNow, setWeatherNow] = useState(null)
-    let [coords, setCoords] = useState({lat:'',lon:''})
+    let [coords, setCoords] = useState({ lat: '', lon: '' })
 
     let pos = (position) => {
-        if(!coords.lat){setCoords({lat: position.coords.latitude, lon: position.coords.longitude})}
+        if (!coords.lat) { setCoords({ lat: position.coords.latitude, lon: position.coords.longitude }) }
     }
 
     navigator.geolocation.getCurrentPosition(pos);
 
-    
+
 
     useEffect(() => {
         if (!weatherNow) {
@@ -27,12 +27,11 @@ let Weather = () => {
 
     return <div>
         {weatherNow ? <div className={s.weather__wrapper}>
-
-            <div className={s.weather__temp}>{Math.round(weatherNow.main.temp - 273) + "\u00b0C"}</div>
-            <div>
+            <div className={s.temerature_wrapper}>
+                <div className={s.weather__temp}>{Math.round(weatherNow.main.temp - 273) + "\u00b0C"}</div>
                 <img src={weatherLogoChoiser(weatherNow.weather[0].id, now.getHours())} alt='sun' className={s.weather_pic} />
-                <div className={s.weather_location}>{weatherNow.name}</div>
             </div>
+            <div className={s.weather_location}>{weatherNow.name}</div>
 
         </div> : ''}
     </div>

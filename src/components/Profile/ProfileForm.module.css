@@ -12,7 +12,6 @@
     align-items: center;
     justify-content: space-around;
     width: 330px;
-    height: 260px;
     padding: 10px;
     border: solid 3px var(--main-border);
 }
@@ -47,4 +46,11 @@
 .input_form_label{
     margin-right: 10px;
     font-weight: 700;    
+}
+
+.buttons_wrapper{
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
