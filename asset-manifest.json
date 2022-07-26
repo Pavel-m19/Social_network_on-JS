@@ -1,10 +1,15 @@
 {
   "files": {
-    "main.css": "/Social_network_on-JS/static/css/main.9f922497.css",
-    "main.js": "/Social_network_on-JS/static/js/main.7434c6ec.js",
+    "main.css": "/Social_network_on-JS/static/css/main.751a4a99.css",
+    "main.js": "/Social_network_on-JS/static/js/main.65d54235.js",
     "static/js/787.28cb0dcd.chunk.js": "/Social_network_on-JS/static/js/787.28cb0dcd.chunk.js",
+    "static/media/forest.png": "/Social_network_on-JS/static/media/forest.a56de719e333d64221f6.png",
+    "static/media/cloud1.png": "/Social_network_on-JS/static/media/cloud1.042e68f47ee7631b9499.png",
+    "static/media/cloud2.png": "/Social_network_on-JS/static/media/cloud2.fd4bfafe2b9b2f0d0c5c.png",
+    "static/media/rock.png": "/Social_network_on-JS/static/media/rock.18f4f4757c769c12e11b.png",
     "static/media/BMI.png": "/Social_network_on-JS/static/media/BMI.b5d37d4abdb0017ee56e.png",
     "static/media/sun logo.png": "/Social_network_on-JS/static/media/sun logo.79a72dd3cdd7dad138a9.png",
+    "static/media/mountains_bcg.jpg": "/Social_network_on-JS/static/media/mountains_bcg.d04d7a4e09202fdfa9cc.jpg",
     "static/media/BeanEater.gif": "/Social_network_on-JS/static/media/BeanEater.b73093a68e61849a8473.gif",
     "static/media/moon logo.png": "/Social_network_on-JS/static/media/moon logo.b83d91f740182cc623f8.png",
     "static/media/user_ava.png": "/Social_network_on-JS/static/media/user_ava.6d1644ecf41addb3bd0e.png",
@@ -24,12 +29,12 @@
     "static/media/krestik.png": "/Social_network_on-JS/static/media/krestik.7380e8b85184d0063152.png",
     "static/media/nolik.png": "/Social_network_on-JS/static/media/nolik.61c38e44fb6ae995842b.png",
     "index.html": "/Social_network_on-JS/index.html",
-    "main.9f922497.css.map": "/Social_network_on-JS/static/css/main.9f922497.css.map",
-    "main.7434c6ec.js.map": "/Social_network_on-JS/static/js/main.7434c6ec.js.map",
+    "main.751a4a99.css.map": "/Social_network_on-JS/static/css/main.751a4a99.css.map",
+    "main.65d54235.js.map": "/Social_network_on-JS/static/js/main.65d54235.js.map",
     "787.28cb0dcd.chunk.js.map": "/Social_network_on-JS/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f922497.css",
-    "static/js/main.7434c6ec.js"
+    "static/css/main.751a4a99.css",
+    "static/js/main.65d54235.js"
   ]
 }
