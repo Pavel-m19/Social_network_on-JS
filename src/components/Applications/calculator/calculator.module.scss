@@ -1,0 +1,109 @@
+.calculators__wrapper{    
+    padding: 30px;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+s.data_input_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label_block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 260px;
+    height: 30px;    
+}
+
+.input_form_label{
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sex_block{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+    span{
+        color: red;
+        font-size: 15px;
+    }    
+}
+
+.user_info_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info_feild{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85px;
+    span{
+        color: red;
+        font-size: 15px;
+    }
+}
+
+.sex_block_elems_wrapper{
+    width: 200px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.sex_block_elem{
+    display: inline-block;
+    
+    input[type=radio] {
+        display: none;
+    }
+
+    label {
+        display: inline-block;
+        cursor: pointer;
+        padding: 0px 15px;
+        line-height: 34px;
+        border: 1px solid var(--main-border);
+    }
+
+    input[type=radio]:checked + label {
+        background: #ffe0a6;
+        border: 2px solid var(--panels-color);
+    }
+
+    label:hover {
+        color: #666;
+    }
+}
+
+.cpfc_diagramm_wrapper{
+    position: relative;
+    }
+
+.bmi_arrow{
+    top: 63px;
+    right: 204px;
+    position: absolute;
+    height: 165px; 
+    transform-origin: 14px 148px;  
+    transform: rotate(calc(-120deg + (var(--angle)))) scale(0.8);
+}
+.bmi_value{
+    height: 45px;
+    font-size: 30px;
+    font-weight: 700;
+    width: 440px;
+    text-align: center;
+}

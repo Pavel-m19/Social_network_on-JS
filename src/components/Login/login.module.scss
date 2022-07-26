@@ -1,0 +1,59 @@
+.login_block {
+    border: 2px solid var(--main-border);
+    box-shadow: inset 0 0 3px var(--main-border);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    font-size: 17px;
+    color: var(--nav-text-color);
+    height: 37px;
+    width: 120px;
+    background-color: var(--panels-color);
+    border: none;
+    border-radius: 20px;
+    transition: 0.1s;
+}
+
+button:enabled:hover {
+    box-shadow: 0 0 6px var(--panels-color);
+    font-size: 18px;
+}
+
+.button_wrapper {
+    height: 50px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.checker {
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feild_wrapper{
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link_to_app{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    
+    a{
+        color: var(--nav-active-text-color);
+    }
+    a:hover{
+        color: red;
+    }
+}
+

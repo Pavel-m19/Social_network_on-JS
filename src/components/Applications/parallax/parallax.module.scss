@@ -1,0 +1,46 @@
+.parallax_wrapper{
+    margin: 20px;
+    height: 350px;
+    width: 600px;
+    background-image: url('../../../assets/parallax/mountains_bcg.jpg') ;
+    background-size: cover;
+    position: relative;
+    overflow:hidden
+}
+
+.parallax_wrapper img{
+    position: absolute;
+}
+
+
+.forest{
+    bottom: calc(-40px - var(--t));
+    width: 130%;
+    right: calc(-80px - var(--r));    
+
+}
+
+.rock{
+    height: 150px;
+    bottom: calc(-50px - var(--t));
+    z-index: 10;
+    right: calc(-60px - var(--r));    
+}
+
+.rock_2{
+    height: 120px;
+    left: calc(-40px + var(--r));
+}
+
+.cloud1{
+    width: 150px;
+    height: 100px;
+    left: calc(var(--c) - 170px);
+}
+
+.cloud2{
+    width: 120px;
+    height: 90px;
+    top: 60px;
+    left: calc(var(--c));
+}
