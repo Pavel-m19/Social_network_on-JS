@@ -6,6 +6,7 @@ import TimerPack from "./timerPack/timerPack";
 import Calculator from "./calculator/calculator";
 import { motion, AnimatePresence } from "framer-motion";
 import Parallax from "./parallax/parallax";
+import Game from "./game/game";
 
 let Applications = () => {
 
@@ -25,6 +26,9 @@ let Applications = () => {
             <div className={`${s.apps__list_item} +  ${appId === 'parallax' && s.active}`}>
                 <NavLink to={'/Applications/parallax'} className={navData => navData.isActive ? s.activeLink : s.item}>Parallax</NavLink>
             </div>
+            <div className={`${s.apps__list_item} +  ${appId === 'game' && s.active}`}>
+                <NavLink to={'/Applications/game'} className={navData => navData.isActive ? s.activeLink : s.item}>2048</NavLink>
+            </div>
         </div>
         <div className={s.application__wrapper}>
 
@@ -41,6 +45,7 @@ let Applications = () => {
                     {appId === 'clock' && <TimerPack />}
                     {appId === 'calculator' && <Calculator />}
                     {appId === 'parallax' && <Parallax />}
+                    {appId === 'game' && <Game />}
                 </motion.div>
             </AnimatePresence>
 
